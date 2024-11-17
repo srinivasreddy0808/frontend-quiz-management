@@ -1,0 +1,149 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 845px;
+  height: 422px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Adjust width as needed */
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalOverlay [type="text"] {
+  width: 673px;
+  height: 81px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 25px 0px #00000026;
+
+  margin-bottom: 1rem;
+  outline: none;
+  background: #ffffff;
+  color: #9f9f9f;
+
+  box-sizing: border-box;
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 37.5px;
+}
+
+.quizTypeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-bottom: 40px;
+  gap: 1rem;
+}
+
+.quizTypeLabel {
+  margin-right: 1rem;
+  color: #333;
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 37.5px;
+  text-align: center;
+  color: #9f9f9f;
+}
+
+.quizTypeOption {
+  width: 171px;
+  height: 46px;
+
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 0px 25px 0px #00000026;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  color: #9f9f9f;
+}
+
+.quizTypeOptionActive {
+  background-color: #60b84b; /* Light green background for active state */
+  border-color: #4caf50; /* Green border for active state */
+  color: #f6faf7; /* Green text color for active state */
+  font-weight: bold;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.modalContent button {
+  width: 279px;
+  height: 46px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Poppins;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 31.5px;
+  text-align: center;
+  color: #474444;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 15px 0px #00000040;
+}
+
+.modalContent button:hover {
+  background-color: #f0f0f0; /* Light grey on hover */
+}
+
+.modalContent button:first-of-type {
+  background-color: #fff; /* Cancel button background */
+  color: #333;
+  border: 1px solid #ddd; /* Border for cancel button */
+}
+
+.modalContent button:last-of-type {
+  background-color: #4caf50; /* Continue button background */
+  color: white;
+}
+
+.modalContent button:last-of-type:disabled {
+  background-color: #a5d6a7; /* Lighter green for disabled state */
+  cursor: not-allowed;
+}

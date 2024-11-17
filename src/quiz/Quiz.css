@@ -1,0 +1,256 @@
+.quiz-background {
+  position: absolute;
+  top: 0;
+  background: #041325;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.quiz-container {
+  max-width: 1000px;
+
+  max-height: 680px;
+  margin: 20px auto;
+  margin-top: 70px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Quiz Header */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.quiz-header > div:first-child {
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: left;
+  margin-left: 60px;
+  color: #474444;
+}
+
+.timer {
+  color: #dc3545;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: left;
+  margin-right: 60px;
+}
+
+/* Quiz Content */
+.quiz-content {
+  padding: 15px;
+  margin: 10px 30px;
+  margin-left: 60px;
+}
+
+.question-text {
+  margin-bottom: 15px;
+
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 33px;
+  text-align: left;
+  color: #474444;
+}
+
+/* Options Grid */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 80px;
+
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  color: #000000;
+
+  transition: all 0.3s ease;
+}
+
+.option-button:hover,
+.option-button.selected {
+  background-color: #e0e0e0;
+}
+.option-button.selected {
+  border: 3px solid #5076ff;
+}
+.option-button.text {
+  height: 60px;
+}
+
+.option-button.imageUrl {
+  height: 150px;
+}
+
+.option-button.textAndImageUrl {
+  height: 150px;
+  flex-direction: column;
+}
+
+.option-text {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+}
+
+.option-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.option-button.textAndImageUrl .option-text {
+  margin-bottom: 0.5rem;
+}
+
+.option-button.textAndImageUrl .option-image {
+  max-height: 70%;
+}
+
+.quiz-background .completion-screen .trophy-icon {
+  padding: 10px;
+  max-width: 600px;
+  max-height: 400px;
+}
+.completion-screen h2 {
+  margin-bottom: 0;
+}
+.quiz-background .completion-screen p {
+  font-family: Poppins;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 46px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.quiz-background .completion-screen span {
+  color: #60b84b;
+}
+.trophy-icon {
+  width: 700px;
+  height: 300px;
+  margin-left: 90px;
+}
+
+.trophy-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-left: 120px;
+}
+
+/* Next Button */
+.next-button {
+  display: block;
+  max-width: 250px;
+  padding: 12px;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 260px;
+}
+
+.next-button:hover {
+  background-color: #218838;
+}
+
+.poll-success h2 {
+  font-family: Poppins;
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 111px;
+  text-align: center;
+  padding-bottom: 200px;
+  padding-top: 100px;
+}
+/* Responsive Design */
+@media (max-width: 480px) {
+  .quiz-container {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-container {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+  .next-button {
+    margin-left: 0px;
+  }
+  .quiz-header {
+    margin-left: 0px;
+  }
+  .quiz-content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .option-button {
+    min-width: 300px;
+    min-height: 60px;
+  }
+  .trophy-icon {
+    margin-left: 10px;
+  }
+  .trophy-icon img {
+    width: 300px;
+    height: 200px;
+    margin-left: 15px;
+  }
+  .completion-screen {
+    height: 100vh;
+  }
+  .completion-screen h2 {
+    margin-top: 120px;
+  }
+  .timer {
+    font-size: 20px;
+  }
+
+  .poll-success h2 {
+    font-family: Poppins;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 80px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,72 @@
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: 250px;
+}
+
+.success-modal {
+  text-align: center;
+}
+
+.close-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+}
+.success-modal .close-btn {
+  width: 17px;
+  height: 17px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 58.5px;
+  text-align: center;
+  color: #474444;
+}
+
+.link-container {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.link-container input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.share-btn {
+  background-color: #4caf50;
+  width: 220px;
+  height: 40px;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 2px;
+}
+
+.share-btn:hover {
+  background-color: #45a049;
+}

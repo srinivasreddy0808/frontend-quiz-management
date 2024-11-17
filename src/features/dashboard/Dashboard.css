@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+.dashboard-container {
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #ededed;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.stats-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 295px;
+  height: 145px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-number {
+  display: block;
+  margin-bottom: 5px;
+  font-family: Poppins;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 90px;
+  text-align: center;
+}
+.stats-text {
+}
+.trending-section {
+  margin-top: 20px;
+}
+
+.trending-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.trending-box {
+  width: 170px;
+  height: 55px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.trending-box .quiz-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: Poppins;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 23px;
+  padding-left: 0px;
+  text-align: left;
+  color: #474444;
+}
+
+.eye-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.created-at {
+  font-size: 12px;
+  color: #60b84b;
+
+  margin-top: 8px;
+  font-family: Poppins;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16.5px;
+  text-align: left;
+}
+
+.quizzes {
+  color: #ff5d01;
+}
+.questions {
+  color: #60b84b;
+}
+.impressions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: #ff5d01;
+}

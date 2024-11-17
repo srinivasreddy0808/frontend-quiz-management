@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+.auth-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e0e0; /* Light grey background */
+}
+
+.auth-container {
+  background-color: #ffffff; /* White background for the container */
+  padding: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow around the container */
+  border-radius: 12px; /* Rounded corners */
+  width: 400px; /* Adjust width as per your design */
+  text-align: center; /* Center the text inside the container */
+  width: 850px;
+  height: 500px;
+  border-radius: 15px;
+  /*   margin-bottom: 130px;
+ */
+  margin-top: 30px;
+}
+
+.auth-layout .auth-container header h1 {
+  margin-top: 13px;
+  margin-bottom: 13px;
+
+  color: #333; /* Dark text color for the heading */
+  font-family: "Jomhuria", sans-serif; /* */
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  text-align: center;
+}
+.auth-layout .auth-container header {
+  margin-bottom: 10px;
+}
+
+.auth-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-nav-container-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-right: 20px;
+}
+.auth-nav-container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.auth-nav a {
+  display: inline-block;
+  text-decoration: none;
+
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: #333; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  width: 190px;
+  height: 28px;
+  font-family: "Poppins", sans-serif; /* Use Poppins with a fallback font */
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+}
+
+.auth-nav .active {
+  display: inline-block;
+  background-color: #fff; /* Active link background color */
+  color: #333; /* Active link text color */
+  box-shadow: 0px 0px 50px 0px #0019ff3d;
+}
+
+main {
+  margin-top: 1rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
