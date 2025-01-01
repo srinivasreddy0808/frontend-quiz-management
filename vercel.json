@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/quiz/:quizId", "destination": "/index.html" }]
+}
