@@ -46,35 +46,18 @@ const isAuthenticated = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <PrivateRoute
-        element={<Navigate to="/dashboard" />}
-        isAuthenticated={isAuthenticated}
-      />
-    ),
-  },
-  {
-    path: "auth",
-    element: <AuthLayout />,
-    children: [
-      {
-        path: "",
-        element: <Navigate to="/auth/login" />, // Redirects to /auth/login by default
-      },
-      {
-        path: "signup",
-        element: <Signup />,
-      },
-      {
-        path: "login",
-        element: <Login />,
-      },
-    ],
-  },
-  {
-    path: "/",
     element: <MainLayout />,
     children: [
+      {
+        index: true,
+        element: (
+          <PrivateRoute
+            element={<Dashboard />}
+            isAuthenticated={isAuthenticated}
+          />
+        ),
+        loader: dashboardLoader,
+      },
       {
         path: "dashboard",
         element: (
@@ -113,6 +96,24 @@ const router = createBrowserRouter([
           />
         ),
         loader: fetchQuizAnalytics, // Attach the loader function
+      },
+    ],
+  },
+  {
+    path: "auth",
+    element: <AuthLayout />,
+    children: [
+      {
+        index: true,
+        element: <Navigate to="/auth/login" />, // Redirects to /auth/login by default
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },
