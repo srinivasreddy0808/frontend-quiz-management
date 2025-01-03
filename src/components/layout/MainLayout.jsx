@@ -1,9 +1,17 @@
-import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  Outlet,
+  Link,
+  useLocation,
+  useNavigate,
+  useNavigation,
+} from "react-router-dom";
 import "./MainLayout.css";
 
 const MainLayout = function () {
   const location = useLocation();
   const navigate = useNavigate();
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
   // Function to determine if the current path matches
   const isActive = (path) => location.pathname === path;
 
@@ -64,7 +72,7 @@ const MainLayout = function () {
 
       {/* Right Content Part */}
       <div className="content-section">
-        <Outlet />
+        {isLoading ? <div className="loadingSpinner"></div> : <Outlet />}
       </div>
     </div>
   );
