@@ -19,6 +19,7 @@ import { fetchAnalytics } from "./features/analytics/fetchAnalytics";
 import { fetchQuizAnalytics } from "./features/analytics/fetchQuizAnalytics";
 import Quiz from "./quiz/Quiz";
 import { jwtDecode } from "jwt-decode";
+import "./index.css";
 
 const isAuthenticated = () => {
   // Get the token from local storage
@@ -126,7 +127,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider
+        router={router}
+        fallback={<div className="loadingSpinner"></div>}
+      />
       <ToastContainer
         position="top-right"
         autoClose={5000}

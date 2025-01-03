@@ -148,12 +148,3 @@
     transform: rotate(360deg);
   }
 }
-
-@media screen and (max-width: 768px) {
-  .mobileActive {
-    display: none;
-  }
-  .loadingSpinner::before {
-    left: 40%;
-  }
-}
