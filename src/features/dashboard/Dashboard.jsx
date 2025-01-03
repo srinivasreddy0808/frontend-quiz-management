@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import eyeIcon from "./../../assets/eye.png";
 import "./Dashboard.css";
 
@@ -12,10 +12,21 @@ const formatImpressions = (impressions) => {
 
 const Dashboard = () => {
   const { data } = useLoaderData();
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+
+  if (isLoading) {
+    return (
+      <div className="dashboard-container">
+        <div className="loadingSpinner"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="dashboard-container">
       {/* Stats Section */}
+
       <div className="stats-section">
         <div className="stats-box quizzes">
           <div>

@@ -121,3 +121,39 @@
 
   color: #ff5d01;
 }
+
+.loadingSpinner {
+  width: 100px;
+  height: 100px;
+  /*   position: relative;
+ */
+}
+
+.loadingSpinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 6px solid #35d1dc;
+  border-right: 6px solid transparent;
+  animation: spinner8217 0.8s linear infinite;
+}
+
+@keyframes spinner8217 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobileActive {
+    display: none;
+  }
+  .loadingSpinner::before {
+    left: 40%;
+  }
+}
